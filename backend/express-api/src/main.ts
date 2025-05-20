@@ -11,7 +11,7 @@ import {ApiResponse, Product} from "@medium/libs";
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors());
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
