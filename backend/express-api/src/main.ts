@@ -21,6 +21,7 @@ app.get('/api', (req, res) => {
 
 app.get('/api/products', (req, res) => {  
   const filePath = path.join(__dirname, 'assets/data.json');
+  console.log(filePath);
 
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
