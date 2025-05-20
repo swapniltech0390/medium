@@ -1,2 +1,7 @@
-<app-nx-welcome></app-nx-welcome>
-<router-outlet></router-outlet>
+<lib-button></lib-button>
+<div class="container">
+    <div *ngFor="let product of products" class="card">
+        <img [src]="product.image" [alt]="product.title" class="card-image" />
+        <h6 class="card-header">{{product.title}}</h6>
+    </div>
+</div>

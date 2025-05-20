@@ -63,7 +63,11 @@
           "buildTarget": "products:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "dependsOn": ["express-api:serve"],
+      "options": {
+        "proxyConfig": "apps/products/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
