@@ -1,7 +1,0 @@
-{
-  "/api": {
-    "target": "https://nx-express-api.onrender.com/",
-    "secure": false,
-    "changeOrigin": true
-  }
-}

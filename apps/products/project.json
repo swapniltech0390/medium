@@ -27,6 +27,12 @@
       },
       "configurations": {
         "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/products/src/environments/environment.ts",
+              "with": "apps/products/src/environments/environment.prod.ts"
+            }
+          ],
           "budgets": [
             {
               "type": "initial",
@@ -57,18 +63,14 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "products:build:production",
-          "proxyConfig": "apps/products/proxy-prod.conf.json"
+          "buildTarget": "products:build:production"
         },
         "development": {
           "buildTarget": "products:build:development"
         }
       },
       "defaultConfiguration": "development",
-      "dependsOn": ["express-api:serve"],
-      "options": {
-        "proxyConfig": "apps/products/proxy.conf.json"
-      }
+      "dependsOn": ["express-api:serve"]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
