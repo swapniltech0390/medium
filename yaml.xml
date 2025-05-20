@@ -1,0 +1,6 @@
+services:  
+  - type: web  
+    name: express-api  
+    runtime: node  
+    buildCommand: npm install && nx build express-api --prod  
+    startCommand: node dist/backend/express-api/main.js 
