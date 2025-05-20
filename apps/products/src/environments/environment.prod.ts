@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://express-api.onrender.com',
+  apiUrl: 'https://nx-express-api.onrender.com/',
 };
